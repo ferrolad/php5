@@ -449,6 +449,9 @@ typedef int BOOL;
 #define FALSE   0
 #define TRUE    1
 
+#define NEWLINE "\n"
+#define NEWLINE_LEN sizeof(NEWLINE) - 1
+
 /* Escape items that are just an encoding of a particular data value. Note that
 ESC_n is defined as yet another macro, which is set in config.h to either \n
 (the default) or \r (which some people want). */
