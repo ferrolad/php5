@@ -7,24 +7,24 @@
 CFG=EngineSelect - Win32 Release
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
-!MESSAGE
+!MESSAGE 
 !MESSAGE NMAKE /f "EngineSelect.mak".
-!MESSAGE
+!MESSAGE 
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
-!MESSAGE
+!MESSAGE 
 !MESSAGE NMAKE /f "EngineSelect.mak" CFG="EngineSelect - Win32 Release"
-!MESSAGE
+!MESSAGE 
 !MESSAGE Possible choices for configuration are:
-!MESSAGE
+!MESSAGE 
 !MESSAGE "EngineSelect - Win32 Release" (based on "Win32 (x86) External Target")
 !MESSAGE "EngineSelect - Win32 Debug" (based on "Win32 (x86) External Target")
-!MESSAGE
+!MESSAGE 
 
 # Begin Project
 # PROP AllowPerConfigDependencies 0
-# PROP Scc_ProjName ""$/DeZend/5.2.1.x/win32", TTNAAAAA"
-# PROP Scc_LocalPath "."
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
 
 !IF  "$(CFG)" == "EngineSelect - Win32 Release"
 
@@ -68,7 +68,7 @@ CFG=EngineSelect - Win32 Release
 # PROP Bsc_Name ""
 # PROP Target_Dir ""
 
-!ENDIF
+!ENDIF 
 
 # Begin Target
 
@@ -79,7 +79,7 @@ CFG=EngineSelect - Win32 Release
 
 !ELSEIF  "$(CFG)" == "EngineSelect - Win32 Debug"
 
-!ENDIF
+!ENDIF 
 
 # End Target
 # End Project

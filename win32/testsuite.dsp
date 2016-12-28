@@ -7,26 +7,26 @@
 CFG=testsuite - Win32 Debug_TS
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
-!MESSAGE
+!MESSAGE 
 !MESSAGE NMAKE /f "testsuite.mak".
-!MESSAGE
+!MESSAGE 
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
-!MESSAGE
+!MESSAGE 
 !MESSAGE NMAKE /f "testsuite.mak" CFG="testsuite - Win32 Debug_TS"
-!MESSAGE
+!MESSAGE 
 !MESSAGE Possible choices for configuration are:
-!MESSAGE
+!MESSAGE 
 !MESSAGE "testsuite - Win32 Release_TS_Inline" (based on "Win32 (x86) Generic Project")
 !MESSAGE "testsuite - Win32 Release_TS" (based on "Win32 (x86) Generic Project")
 !MESSAGE "testsuite - Win32 Release_TSDbg" (based on "Win32 (x86) Generic Project")
 !MESSAGE "testsuite - Win32 Debug_TS" (based on "Win32 (x86) Generic Project")
-!MESSAGE
+!MESSAGE 
 
 # Begin Project
 # PROP AllowPerConfigDependencies 0
-# PROP Scc_ProjName ""$/DeZend/5.2.1.x/win32", TTNAAAAA"
-# PROP Scc_LocalPath "."
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
 MTL=midl.exe
 
 !IF  "$(CFG)" == "testsuite - Win32 Release_TS_Inline"
@@ -81,7 +81,7 @@ MTL=midl.exe
 # PROP Intermediate_Dir "..\..\"
 # PROP Target_Dir ""
 
-!ENDIF
+!ENDIF 
 
 # Begin Target
 
@@ -102,10 +102,10 @@ IntDir=.\..\Release_TS_Inline
 InputPath=..\results.txt
 
 "..\..\results.txt" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	set TOP_BUILDDIR=Release_TS_inline
-	set TEST_DIR=tests
-	$(IntDir)\php.exe -q ..\run-tests.php > ..\results.txt
-
+	set TOP_BUILDDIR=Release_TS_inline 
+	set TEST_DIR=tests 
+	$(IntDir)\php.exe -q ..\run-tests.php > ..\results.txt 
+	
 # End Custom Build
 
 !ELSEIF  "$(CFG)" == "testsuite - Win32 Release_TS"
@@ -117,10 +117,10 @@ IntDir=.\..\Release_TS
 InputPath=..\results.txt
 
 "..\..\results.txt" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	set TOP_BUILDDIR=Release_TS
-	set TEST_DIR=tests
-	$(IntDir)\php.exe -q ..\run-tests.php > ..\results.txt
-
+	set TOP_BUILDDIR=Release_TS 
+	set TEST_DIR=tests 
+	$(IntDir)\php.exe -q ..\run-tests.php > ..\results.txt 
+	
 # End Custom Build
 
 !ELSEIF  "$(CFG)" == "testsuite - Win32 Release_TSDbg"
@@ -132,10 +132,10 @@ IntDir=.\..\Release_TSDbg
 InputPath=..\results.txt
 
 "..\..\results.txt" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	set TOP_BUILDDIR=Release_TSDbg
-	set TEST_DIR=tests
-	$(IntDir)\php.exe -q ..\run-tests.php > ..\results.txt
-
+	set TOP_BUILDDIR=Release_TSDbg 
+	set TEST_DIR=tests 
+	$(IntDir)\php.exe -q ..\run-tests.php > ..\results.txt 
+	
 # End Custom Build
 
 !ELSEIF  "$(CFG)" == "testsuite - Win32 Debug_TS"
@@ -143,7 +143,7 @@ InputPath=..\results.txt
 # PROP Intermediate_Dir "..\Debug_TS"
 # PROP Exclude_From_Build 1
 
-!ENDIF
+!ENDIF 
 
 # End Source File
 # End Target

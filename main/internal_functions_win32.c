@@ -33,8 +33,6 @@
 #error HEAD does not work with ZendEngine1 anymore
 #endif
 
-#include "ext/standard/php_standard.h"
-/*
 #include "ext/standard/dl.h"
 #include "ext/standard/file.h"
 #include "ext/standard/fsock.h"
@@ -46,11 +44,11 @@
 #include "ext/standard/php_filestat.h"
 #include "ext/standard/php_mail.h"
 #include "ext/standard/php_ext_syslog.h"
+#include "ext/standard/php_standard.h"
 #include "ext/standard/php_lcg.h"
 #include "ext/standard/php_array.h"
 #include "ext/standard/php_assert.h"
 #include "ext/reflection/php_reflection.h"
-
 #if HAVE_BCMATH
 #include "ext/bcmath/php_bcmath.h"
 #endif
@@ -116,8 +114,6 @@
 #if HAVE_XML && HAVE_XMLWRITER
 #include "ext/xmlwriter/php_xmlwriter.h"
 #endif
-*/
-
 /* }}} */
 
 /* {{{ php_builtin_extensions[]
@@ -130,7 +126,7 @@ static zend_module_entry *php_builtin_extensions[] = {
 #if HAVE_CALENDAR
 	,phpext_calendar_ptr
 #endif
-	//,phpext_com_dotnet_ptr
+	,phpext_com_dotnet_ptr
 #if HAVE_CTYPE
 	,phpext_ctype_ptr
 #endif
@@ -155,7 +151,7 @@ static zend_module_entry *php_builtin_extensions[] = {
 #if HAVE_PCRE || HAVE_BUNDLED_PCRE
 	,phpext_pcre_ptr
 #endif
-	//,phpext_reflection_ptr
+	,phpext_reflection_ptr
 #if HAVE_PHP_SESSION
 	,phpext_session_ptr
 #endif

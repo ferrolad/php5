@@ -21,13 +21,12 @@ CFG=TSRM - Win32 Debug_TS
 !MESSAGE "TSRM - Win32 Release_TS" (based on "Win32 (x86) Static Library")
 !MESSAGE "TSRM - Win32 Release_TS_inline" (based on "Win32 (x86) Static Library")
 !MESSAGE "TSRM - Win32 Release_TSDbg" (based on "Win32 (x86) Static Library")
-!MESSAGE "TSRM - Win32 Release_TS_Final" (based on "Win32 (x86) Static Library")
 !MESSAGE 
 
 # Begin Project
 # PROP AllowPerConfigDependencies 0
-# PROP Scc_ProjName ""$/DeZend/5.2.1.x/win32", TTNAAAAA"
-# PROP Scc_LocalPath "..\win32"
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
 CPP=cl.exe
 RSC=rc.exe
 
@@ -44,7 +43,7 @@ RSC=rc.exe
 # PROP Intermediate_Dir "Debug_TS"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /I "C:\Projects\TSRM" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
-# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "." /D "_DEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D TSRM_DEBUG=1 /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /YX /FD /GZ /c
+# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "." /D "_DEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D "WIN32" /D "_MBCS" /D TSRM_DEBUG=1 /YX /FD /GZ /c
 # ADD BASE RSC /l 0x40d /d "_DEBUG"
 # ADD RSC /l 0x40d /d "_DEBUG"
 BSC32=bscmake.exe
@@ -67,9 +66,9 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "Release_TS"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
-# ADD CPP /nologo /MD /W3 /GX /Zi /O2 /I "." /D "NDEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D TSRM_DEBUG=0 /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /YX /FD /c
+# ADD CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D "WIN32" /D "_MBCS" /D TSRM_DEBUG=0 /YX /FD /c
 # ADD BASE RSC /l 0x40d /d "NDEBUG"
-# ADD RSC /l 0x409 /d "NDEBUG"
+# ADD RSC /l 0x40d /d "NDEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
@@ -90,7 +89,7 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "Release_TS_inline"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDEBUG" /D "WIN32" /D "_MBCS" /D "_LIB" /D "TSRM_EXPORTS" /YX /FD /c
-# ADD CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D TSRM_DEBUG=0 /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /YX /FD /c
+# ADD CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D "WIN32" /D "_MBCS" /D TSRM_DEBUG=0 /YX /FD /c
 # ADD BASE RSC /l 0x40d /d "NDEBUG"
 # ADD RSC /l 0x40d /d "NDEBUG"
 BSC32=bscmake.exe
@@ -113,30 +112,7 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "Release_TSDbg"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D "WIN32" /D "_MBCS" /D TSRM_DEBUG=0 /YX /FD /c
-# ADD CPP /nologo /MD /W3 /GX /Zi /Od /I "." /D "NDEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D TSRM_DEBUG=0 /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /YX /FD /c
-# ADD BASE RSC /l 0x40d /d "NDEBUG"
-# ADD RSC /l 0x40d /d "NDEBUG"
-BSC32=bscmake.exe
-# ADD BASE BSC32 /nologo
-# ADD BSC32 /nologo
-LIB32=link.exe -lib
-# ADD BASE LIB32 /nologo
-# ADD LIB32 /nologo
-
-!ELSEIF  "$(CFG)" == "TSRM - Win32 Release_TS_Final"
-
-# PROP BASE Use_MFC 0
-# PROP BASE Use_Debug_Libraries 0
-# PROP BASE Output_Dir "TSRM___Win32_Release_TS_Final"
-# PROP BASE Intermediate_Dir "TSRM___Win32_Release_TS_Final"
-# PROP BASE Target_Dir ""
-# PROP Use_MFC 0
-# PROP Use_Debug_Libraries 0
-# PROP Output_Dir "TSRM___Win32_Release_TS_Final"
-# PROP Intermediate_Dir "TSRM___Win32_Release_TS_Final"
-# PROP Target_Dir ""
-# ADD BASE CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D TSRM_DEBUG=0 /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /YX /FD /c
-# ADD CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D TSRM_DEBUG=0 /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /YX /FD /c
+# ADD CPP /nologo /MD /W3 /GX /Zi /Od /I "." /D "NDEBUG" /D "ZTS" /D "_LIB" /D "TSRM_EXPORTS" /D "WIN32" /D "_MBCS" /D TSRM_DEBUG=0 /YX /FD /c
 # ADD BASE RSC /l 0x40d /d "NDEBUG"
 # ADD RSC /l 0x40d /d "NDEBUG"
 BSC32=bscmake.exe
@@ -154,7 +130,6 @@ LIB32=link.exe -lib
 # Name "TSRM - Win32 Release_TS"
 # Name "TSRM - Win32 Release_TS_inline"
 # Name "TSRM - Win32 Release_TSDbg"
-# Name "TSRM - Win32 Release_TS_Final"
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"

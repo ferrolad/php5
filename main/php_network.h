@@ -25,12 +25,8 @@
 # ifndef WINNT
 #  define WINNT 1
 # endif
-
-#if HAVE_ARPA_INET_H
 # undef FD_SETSIZE
 # include "arpa/inet.h"
-#endif
-
   /* Apache folks decided that strtoul was evil and redefined
    * it to something that breaks the windows headers */
 # undef strtoul

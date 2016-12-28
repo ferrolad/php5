@@ -7,26 +7,26 @@
 CFG=php5ts_cli - Win32 Debug_TS
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
-!MESSAGE
+!MESSAGE 
 !MESSAGE NMAKE /f "php5ts_cli.mak".
-!MESSAGE
+!MESSAGE 
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
-!MESSAGE
+!MESSAGE 
 !MESSAGE NMAKE /f "php5ts_cli.mak" CFG="php5ts_cli - Win32 Debug_TS"
-!MESSAGE
+!MESSAGE 
 !MESSAGE Possible choices for configuration are:
-!MESSAGE
+!MESSAGE 
 !MESSAGE "php5ts_cli - Win32 Release_TS" (based on "Win32 (x86) Console Application")
 !MESSAGE "php5ts_cli - Win32 Debug_TS" (based on "Win32 (x86) Console Application")
 !MESSAGE "php5ts_cli - Win32 Release_TS_inline" (based on "Win32 (x86) Console Application")
 !MESSAGE "php5ts_cli - Win32 Release_TSDbg" (based on "Win32 (x86) Console Application")
-!MESSAGE
+!MESSAGE 
 
 # Begin Project
 # PROP AllowPerConfigDependencies 0
-# PROP Scc_ProjName ""$/DeZend/5.2.1.x/win32", TTNAAAAA"
-# PROP Scc_LocalPath "."
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
 CPP=cl.exe
 RSC=rc.exe
 
@@ -135,7 +135,7 @@ LINK32=link.exe
 # ADD BASE LINK32 php5ts.lib winmm.lib wsock32.lib netapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /version:4.0 /subsystem:console /machine:I386 /nodefaultlib:"libc.lib" /out:"..\Release_TS\php.exe" /libpath:"..\Release_TS"
 # ADD LINK32 php5ts.lib winmm.lib wsock32.lib netapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /version:4.0 /subsystem:console /debug /machine:I386 /nodefaultlib:"libc.lib" /out:"..\Release_TSDbg\php.exe" /libpath:"..\Release_TSDbg"
 
-!ENDIF
+!ENDIF 
 
 # Begin Target
 

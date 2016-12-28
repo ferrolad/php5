@@ -3088,8 +3088,6 @@ ZEND_END_ARG_INFO()
 /* }}} */
 
 zend_function_entry basic_functions[] = {
-    { 0 },
-#if 0
 	PHP_FE(constant,														arginfo_constant)
 	PHP_FE(bin2hex,															arginfo_bin2hex)
 	PHP_FE(sleep,															arginfo_sleep)
@@ -3776,7 +3774,6 @@ zend_function_entry basic_functions[] = {
 
 	PHP_FE(sys_get_temp_dir,												arginfo_sys_get_temp_dir)
 	{NULL, NULL, NULL}
-#endif
 };
 
 

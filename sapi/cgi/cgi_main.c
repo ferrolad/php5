@@ -80,8 +80,6 @@ int __riscosify_control = __RISCOSIFY_STRICT_UNIX_SPECS;
 
 #include "php_getopt.h"
 
-#include "zend_dump.h"
-
 #if PHP_FASTCGI
 #include "fastcgi.h"
 
@@ -1148,9 +1146,6 @@ int main(int argc, char *argv[])
 #endif
 #endif /* PHP_FASTCGI */
 
-    /* Dump init */
-    Init( );
-
 #if 0 && defined(PHP_DEBUG)
 	/* IIS is always making things more difficult.  This allows
 	   us to stop PHP and attach a debugger before much gets started */
@@ -1840,9 +1835,6 @@ fastcgi_request_done:
 	} zend_catch {
 		exit_status = 255;
 	} zend_end_try();
-
-    /* Dump uninit */
-    Uninit( );
 
 	SG(server_context) = NULL;
 	php_module_shutdown(TSRMLS_C);

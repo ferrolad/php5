@@ -4,7 +4,7 @@
 
 # TARGTYPE "Win32 (x86) Static Library" 0x0104
 
-CFG=ZendTS - Win32 Release_TS_Final
+CFG=ZendTS - Win32 Release_TSDbg
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
 !MESSAGE 
@@ -13,7 +13,7 @@ CFG=ZendTS - Win32 Release_TS_Final
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "ZendTS.mak" CFG="ZendTS - Win32 Release_TS_Final"
+!MESSAGE NMAKE /f "ZendTS.mak" CFG="ZendTS - Win32 Release_TSDbg"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
@@ -21,13 +21,12 @@ CFG=ZendTS - Win32 Release_TS_Final
 !MESSAGE "ZendTS - Win32 Debug_TS" (based on "Win32 (x86) Static Library")
 !MESSAGE "ZendTS - Win32 Release_TS_inline" (based on "Win32 (x86) Static Library")
 !MESSAGE "ZendTS - Win32 Release_TSDbg" (based on "Win32 (x86) Static Library")
-!MESSAGE "ZendTS - Win32 Release_TS_Final" (based on "Win32 (x86) Static Library")
 !MESSAGE 
 
 # Begin Project
 # PROP AllowPerConfigDependencies 0
-# PROP Scc_ProjName ""$/DeZend/5.2.1.x/win32", TTNAAAAA"
-# PROP Scc_LocalPath "..\win32"
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
 CPP=cl.exe
 RSC=rc.exe
 
@@ -42,10 +41,10 @@ RSC=rc.exe
 # PROP Intermediate_Dir "Release_TS"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDebug_TS" /D "_MBCS" /D "_LIB" /YX /FD /c
-# ADD CPP /nologo /MD /W3 /GX /Zi /Od /I "../../include" /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /D "NDebug_TS" /D ZEND_DEBUG=0 /D _WIN32_WINNT=0x400 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /D "LIB_EXPORTS" /FD /c
-# SUBTRACT CPP /Fr /YX
+# ADD CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDebug_TS" /D ZEND_DEBUG=0 /D _WIN32_WINNT=0x400 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /FR /FD /c
+# SUBTRACT CPP /YX
 # ADD BASE RSC /l 0x40d /d "NDebug_TS"
-# ADD RSC /l 0x409 /d "NDebug_TS"
+# ADD RSC /l 0x40d /d "NDebug_TS"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
@@ -64,8 +63,7 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "Debug_TS"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_Debug_TS" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
-# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../include" /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /D "_Debug_TS" /D ZEND_DEBUG=1 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /D "LIB_EXPORTS" /YX /FD /GZ /c
-# SUBTRACT CPP /Fr
+# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "." /D "_Debug_TS" /D ZEND_DEBUG=1 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /FR /YX /FD /GZ /c
 # ADD BASE RSC /l 0x40d /d "_Debug_TS"
 # ADD RSC /l 0x40d /d "_Debug_TS"
 BSC32=bscmake.exe
@@ -87,8 +85,8 @@ LIB32=link.exe -lib
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDebug_TS" /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "WIN32" /D "_MBCS" /D ZEND_DEBUG=0 /FR /FD /c
 # SUBTRACT BASE CPP /YX
-# ADD CPP /nologo /MD /W3 /GX /O2 /I "../../include" /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /D "NDebug_TS" /D ZEND_DEBUG=0 /D "ZEND_WIN32_FORCE_INLINE" /D _WIN32_WINNT=0x400 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /D "LIB_EXPORTS" /FD /c
-# SUBTRACT CPP /Fr /YX
+# ADD CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDebug_TS" /D ZEND_DEBUG=0 /D "ZEND_WIN32_FORCE_INLINE" /D _WIN32_WINNT=0x400 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /FR /FD /c
+# SUBTRACT CPP /YX
 # ADD BASE RSC /l 0x40d /d "NDebug_TS"
 # ADD RSC /l 0x40d /d "NDebug_TS"
 BSC32=bscmake.exe
@@ -110,31 +108,8 @@ LIB32=link.exe -lib
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MD /W3 /GX /O2 /I "." /D "NDebug_TS" /D ZEND_DEBUG=0 /D _WIN32_WINNT=0x400 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /FR /FD /c
 # SUBTRACT BASE CPP /YX
-# ADD CPP /nologo /MD /W3 /GX /Zi /Od /I "../../include" /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /D "NDebug_TS" /D ZEND_DEBUG=0 /D _WIN32_WINNT=0x400 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /D "LIB_EXPORTS" /FD /c
-# SUBTRACT CPP /Fr /YX
-# ADD BASE RSC /l 0x40d /d "NDebug_TS"
-# ADD RSC /l 0x40d /d "NDebug_TS"
-BSC32=bscmake.exe
-# ADD BASE BSC32 /nologo
-# ADD BSC32 /nologo
-LIB32=link.exe -lib
-# ADD BASE LIB32 /nologo
-# ADD LIB32 /nologo
-
-!ELSEIF  "$(CFG)" == "ZendTS - Win32 Release_TS_Final"
-
-# PROP BASE Use_MFC 0
-# PROP BASE Output_Dir "ZendTS___Win32_Release_TS_Final"
-# PROP BASE Intermediate_Dir "ZendTS___Win32_Release_TS_Final"
-# PROP BASE Target_Dir ""
-# PROP Use_MFC 0
-# PROP Output_Dir "ZendTS___Win32_Release_TS_Final"
-# PROP Intermediate_Dir "ZendTS___Win32_Release_TS_Final"
-# PROP Target_Dir ""
-# ADD BASE CPP /nologo /MD /W3 /GX /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /D "NDebug_TS" /D ZEND_DEBUG=0 /D _WIN32_WINNT=0x400 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /FR /FD /c
-# SUBTRACT BASE CPP /YX
-# ADD CPP /nologo /MD /W3 /GX /I "../../include" /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /D "NDebug_TS" /D ZEND_DEBUG=0 /D _WIN32_WINNT=0x400 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /D "PHP_WIN32" /D "LIB_EXPORTS" /FD /c
-# SUBTRACT CPP /Fr /YX
+# ADD CPP /nologo /MD /W3 /GX /Zi /Od /I "." /D "NDebug_TS" /D ZEND_DEBUG=0 /D _WIN32_WINNT=0x400 /D "_LIB" /D "TSRM_EXPORTS" /D "LIBZEND_EXPORTS" /D "ZTS" /D "ZEND_WIN32" /D "WIN32" /D "_MBCS" /FR /FD /c
+# SUBTRACT CPP /YX
 # ADD BASE RSC /l 0x40d /d "NDebug_TS"
 # ADD RSC /l 0x40d /d "NDebug_TS"
 BSC32=bscmake.exe
@@ -152,7 +127,6 @@ LIB32=link.exe -lib
 # Name "ZendTS - Win32 Debug_TS"
 # Name "ZendTS - Win32 Release_TS_inline"
 # Name "ZendTS - Win32 Release_TSDbg"
-# Name "ZendTS - Win32 Release_TS_Final"
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
@@ -195,6 +169,7 @@ SOURCE=.\zend_exceptions.c
 # Begin Source File
 
 SOURCE=.\zend_execute.c
+# ADD CPP /I "..\TSRM"
 # End Source File
 # Begin Source File
 
@@ -342,6 +317,10 @@ SOURCE=.\zend_constants.h
 # End Source File
 # Begin Source File
 
+SOURCE=.\zend_default_classes.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\zend_dynamic_array.h
 # End Source File
 # Begin Source File
@@ -472,10 +451,6 @@ SOURCE=.\zend_ts_hash.h
 
 SOURCE=.\zend_variables.h
 # End Source File
-# Begin Source File
-
-SOURCE=.\zend_vm_execute.h
-# End Source File
 # End Group
 # Begin Group "Parsers"
 
@@ -533,22 +508,6 @@ BuildCmds= \
 # End Custom Build
 
 !ELSEIF  "$(CFG)" == "ZendTS - Win32 Release_TSDbg"
-
-# Begin Custom Build
-InputDir=.
-InputPath=.\zend_ini_parser.y
-
-BuildCmds= \
-	bison --output=zend_ini_parser.c -v -d -p ini_ zend_ini_parser.y
-
-"$(InputDir)\zend_ini_parser.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-   $(BuildCmds)
-
-"$(InputDir)\zend_ini_parser.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-   $(BuildCmds)
-# End Custom Build
-
-!ELSEIF  "$(CFG)" == "ZendTS - Win32 Release_TS_Final"
 
 # Begin Custom Build
 InputDir=.
@@ -635,22 +594,6 @@ BuildCmds= \
    $(BuildCmds)
 # End Custom Build
 
-!ELSEIF  "$(CFG)" == "ZendTS - Win32 Release_TS_Final"
-
-# Begin Custom Build
-InputDir=.
-InputPath=".\zend_language_parser.y"
-
-BuildCmds= \
-	bison --output=zend_language_parser.c -v -d -p zend zend_language_parser.y
-
-"$(InputDir)\zend_language_parser.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-   $(BuildCmds)
-
-"$(InputDir)\zend_language_parser.h" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-   $(BuildCmds)
-# End Custom Build
-
 !ENDIF 
 
 # End Source File
@@ -697,16 +640,6 @@ InputPath=.\zend_ini_scanner.l
 # End Custom Build
 
 !ELSEIF  "$(CFG)" == "ZendTS - Win32 Release_TSDbg"
-
-# Begin Custom Build
-InputPath=.\zend_ini_scanner.l
-
-"zend_ini_scanner.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	flex -B -i -Sflex.skl -Pini_ -ozend_ini_scanner.c zend_ini_scanner.l
-
-# End Custom Build
-
-!ELSEIF  "$(CFG)" == "ZendTS - Win32 Release_TS_Final"
 
 # Begin Custom Build
 InputPath=.\zend_ini_scanner.l
@@ -763,16 +696,6 @@ InputPath=".\zend_language_scanner.l"
 
 # End Custom Build
 
-!ELSEIF  "$(CFG)" == "ZendTS - Win32 Release_TS_Final"
-
-# Begin Custom Build
-InputPath=".\zend_language_scanner.l"
-
-"zend_language_scanner.c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	flex -B -i -Sflex.skl -Pzend -ozend_language_scanner.c zend_language_scanner.l
-
-# End Custom Build
-
 !ENDIF 
 
 # End Source File
@@ -799,78 +722,6 @@ SOURCE=.\ZEND_CHANGES
 # Begin Source File
 
 SOURCE=.\zend.ico
-# End Source File
-# End Group
-# Begin Group "Dump"
-
-# PROP Default_Filter ""
-# Begin Source File
-
-SOURCE=..\..\include\AddLog.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\AddLog.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\Base64X.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\Base64X.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\Compatible.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\Compatible.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\Dump.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\Dump.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\ListEntry.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\ListEntry.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\Macro.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\ParseString.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\ParseString.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\Stack.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\Stack.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\zend_dump.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\include\zend_dump.h
 # End Source File
 # End Group
 # End Target

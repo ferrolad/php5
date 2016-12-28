@@ -20,23 +20,23 @@
 #define PHP_SYSCONFDIR "c:\\php5"
 
 /* Enable / Disable BCMATH extension (default: enabled) */
-//#define HAVE_BCMATH 1
+#define HAVE_BCMATH 1
 
 /* Enable / Disable crypt() function (default: enabled) */
-//#define HAVE_CRYPT 1
-//#define PHP_STD_DES_CRYPT 1
-//#define PHP_EXT_DES_CRYPT 0
-//#define PHP_MD5_CRYPT 1
-//#define PHP_BLOWFISH_CRYPT 0
+#define HAVE_CRYPT 1
+#define PHP_STD_DES_CRYPT 1
+#define PHP_EXT_DES_CRYPT 0
+#define PHP_MD5_CRYPT 1
+#define PHP_BLOWFISH_CRYPT 0
 
 /* Enable / Disable CALENDAR extension (default: enabled) */
-//#define HAVE_CALENDAR 1
+#define HAVE_CALENDAR 1
 
 /* Enable / Disable CTYPE extension (default: enabled) */
-//#define HAVE_CTYPE 1
+#define HAVE_CTYPE 1
 
 /* Enable / Disable FTP extension (default: enabled) */
-//#define HAVE_FTP 1
+#define HAVE_FTP 1
 
 /* Enable / Disable MBSTRING extension (default: disabled) */
 /* #define HAVE_MBSTRING 0 */ 
@@ -49,39 +49,39 @@
 
 /* If you have the .Net SDK in your include path, define this
  * to compile .Net support into your COM extension. */
-//#define HAVE_MSCOREE_H 0
+#define HAVE_MSCOREE_H 0
 
 /* Enable / Disable ODBC extension (default: enabled) */
-//#define HAVE_UODBC 1
+#define HAVE_UODBC 1
 
 /* Enable / Disable PCRE extension (default: enabled) */
-//#define HAVE_BUNDLED_PCRE	1
-//#define HAVE_PCRE 1
+#define HAVE_BUNDLED_PCRE	1
+#define HAVE_PCRE 1
 
 /* Enable / Disable SESSION extension (default: enabled) */
-//#define HAVE_PHP_SESSION 1
+#define HAVE_PHP_SESSION 1
 
 /* Enable / Disable TOKENIZER extension (default: enabled) */
-//#define HAVE_TOKENIZER 1
+#define HAVE_TOKENIZER 1
 
 /* Enable / Disable WDDX extension (default: enabled) */
-//#define HAVE_WDDX 1
+#define HAVE_WDDX 1
 
 /* Enable / Disable XML extensions (default: enabled) */
-//#define HAVE_LIBXML 1
-//#define HAVE_DOM 1
-//#define HAVE_SIMPLEXML 1
-//#define HAVE_XML 1
-//#define HAVE_XMLREADER 1
-//#define HAVE_XMLWRITER 1
-//#define HAVE_LIBXML_PARSER_H 1
+#define HAVE_LIBXML 1
+#define HAVE_DOM 1
+#define HAVE_SIMPLEXML 1
+#define HAVE_XML 1
+#define HAVE_XMLREADER 1
+#define HAVE_XMLWRITER 1
+#define HAVE_LIBXML_PARSER_H 1
 
 /* Enable / Disable ZLIB extension (default: enabled) */
-//#define HAVE_ZLIB 1
-//#define HAVE_ZLIB_H 1
+#define HAVE_ZLIB 1
+#define HAVE_ZLIB_H 1
 
 /* Enable / Disable SQLite extension (default: enabled) */
-//#define HAVE_SQLITE 1
+#define HAVE_SQLITE 1
 
 /* PHP Runtime Configuration */
 #define FORCE_CGI_REDIRECT 1
@@ -118,8 +118,8 @@
 #undef HAVE_SETITIMER
 #undef HAVE_IODBC
 #define HAVE_LIBDL 1
-//#define HAVE_SENDMAIL 1
-//#define HAVE_GETTIMEOFDAY 1
+#define HAVE_SENDMAIL 1
+#define HAVE_GETTIMEOFDAY 1
 #define HAVE_PUTENV 1
 #define HAVE_LIMITS_H 1
 #define HAVE_TZSET 1
@@ -138,6 +138,7 @@
 #define HSREGEX 1
 #define HAVE_GCVT 1
 #define HAVE_GETLOGIN 1
+#define HAVE_GETTIMEOFDAY 1
 #define HAVE_MEMCPY 1
 #define HAVE_MEMMOVE 1
 #define HAVE_PUTENV 1
@@ -222,27 +223,27 @@
 #define PHP_FASTCGI 1
 
 /* Have COM_DOTNET support */
-//#define HAVE_COM_DOTNET 1
+#define HAVE_COM_DOTNET 1
 
 /* Have date/time support */
-//#define HAVE_DATE 1
+#define HAVE_DATE 1
 
 /* GD support */
-//#define HAVE_LIBGD 1
+#define HAVE_LIBGD 1
 /* undefined */
-//#define HAVE_HASH_EXT 1
+#define HAVE_HASH_EXT 1
 
 /* Define if iconv extension is enabled */
-//#define HAVE_ICONV 1
+#define HAVE_ICONV 1
 
 /* Define if libiconv is available */
-//#define HAVE_LIBICONV 1
+#define HAVE_LIBICONV 1
 
 /* Which iconv implementation to use */
-//#define PHP_ICONV_IMPL "\"libiconv\""
+#define PHP_ICONV_IMPL "\"libiconv\""
 
 /* Whether iconv supports errno or not */
-//#define ICONV_SUPPORTS_ERRNO 1
+#define ICONV_SUPPORTS_ERRNO 1
 
 /* SPL support */
-//#define HAVE_SPL 1
+#define HAVE_SPL 1

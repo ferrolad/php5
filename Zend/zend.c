@@ -28,7 +28,6 @@
 #include "zend_exceptions.h"
 #include "zend_builtin_functions.h"
 #include "zend_ini.h"
-#include "zend_dump.h"
 
 #ifdef ZTS
 #   define GLOBAL_FUNCTION_TABLE    global_function_table
@@ -1125,18 +1124,15 @@ ZEND_API int zend_execute_scripts(int type TSRMLS_DC, zval **retval, int file_co
 		if (!file_handle) {
 			continue;
 		}
-        pre_compile( );
 		EG(active_op_array) = zend_compile_file(file_handle, type TSRMLS_CC);
 		if(file_handle->opened_path) {
 			int dummy=1;
 			zend_hash_add(&EG(included_files), file_handle->opened_path, strlen(file_handle->opened_path)+1, (void *)&dummy, sizeof(int), NULL);
 		}
-        dump_op_array( EG( active_op_array ), 0 );
 		zend_destroy_file_handle(file_handle TSRMLS_CC);
 		if (EG(active_op_array)) {
 			EG(return_value_ptr_ptr) = retval ? retval : &local_retval;
 			zend_execute(EG(active_op_array) TSRMLS_CC);
-            post_execute( );
 			if (EG(exception)) {
 				if (EG(user_exception_handler)) {
 					zval *orig_user_exception_handler;

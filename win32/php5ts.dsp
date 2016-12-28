@@ -7,27 +7,26 @@
 CFG=php5ts - Win32 Debug_TS
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
-!MESSAGE
+!MESSAGE 
 !MESSAGE NMAKE /f "php5ts.mak".
-!MESSAGE
+!MESSAGE 
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
-!MESSAGE
+!MESSAGE 
 !MESSAGE NMAKE /f "php5ts.mak" CFG="php5ts - Win32 Debug_TS"
-!MESSAGE
+!MESSAGE 
 !MESSAGE Possible choices for configuration are:
-!MESSAGE
+!MESSAGE 
 !MESSAGE "php5ts - Win32 Release_TS" (based on "Win32 (x86) Console Application")
 !MESSAGE "php5ts - Win32 Debug_TS" (based on "Win32 (x86) Console Application")
 !MESSAGE "php5ts - Win32 Release_TS_inline" (based on "Win32 (x86) Console Application")
 !MESSAGE "php5ts - Win32 Release_TSDbg" (based on "Win32 (x86) Console Application")
-!MESSAGE "php5ts - Win32 Release_TS_Final" (based on "Win32 (x86) Console Application")
-!MESSAGE
+!MESSAGE 
 
 # Begin Project
 # PROP AllowPerConfigDependencies 0
-# PROP Scc_ProjName ""$/DeZend/5.2.1.x/win32", TTNAAAAA"
-# PROP Scc_LocalPath "."
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
 CPP=cl.exe
 RSC=rc.exe
 
@@ -45,8 +44,8 @@ RSC=rc.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /c
-# ADD CPP /nologo /MD /W3 /GX /Zi /Od /I "../../include" /I "..\..\win32build\include" /I ".." /I "..\main" /I "..\regex" /I "..\Zend" /I "..\TSRM" /I "..\sapi\cgi\libfcgi\include" /D FCGI_STATIC=1 /D PHP_FASTCGI=1 /D "NDEBUG" /D ZEND_DEBUG=0 /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FD /c
-# SUBTRACT CPP /Fr /YX /Yc /Yu
+# ADD CPP /nologo /MD /W3 /GX /O2 /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /I "..\sapi\cgi\libfcgi\include" /D FCGI_STATIC=1 /D PHP_FASTCGI=1 /D "NDEBUG" /D ZEND_DEBUG=0 /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /Fr /FD /c
+# SUBTRACT CPP /YX /Yc /Yu
 # ADD BASE RSC /l 0x409 /d "NDEBUG"
 # ADD RSC /l 0x409 /d "NDEBUG"
 BSC32=bscmake.exe
@@ -54,7 +53,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /machine:I386
-# ADD LINK32 php5ts.lib winmm.lib ws2_32.lib netapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /version:4.0 /subsystem:console /debug /machine:I386 /nodefaultlib:"libc.lib" /out:"../../output/php.exe" /libpath:"..\Release_TS"
+# ADD LINK32 php5ts.lib winmm.lib ws2_32.lib netapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /version:4.0 /subsystem:console /machine:I386 /nodefaultlib:"libc.lib" /out:"..\Release_TS\php.exe" /libpath:"..\Release_TS"
 
 !ELSEIF  "$(CFG)" == "php5ts - Win32 Debug_TS"
 
@@ -70,8 +69,8 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /c
-# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../include" /I "..\..\win32build\include" /I ".." /I "..\main" /I "..\regex" /I "..\Zend" /I "..\TSRM" /I "..\sapi\cgi\libfcgi\include" /D FCGI_STATIC=1 /D PHP_FASTCGI=1 /D "DEBUG" /D "_DEBUG" /D ZEND_DEBUG=1 /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FD /c
-# SUBTRACT CPP /Fr /YX
+# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /I "..\sapi\cgi\libfcgi\include" /D FCGI_STATIC=1 /D PHP_FASTCGI=1 /D "DEBUG" /D "_DEBUG" /D ZEND_DEBUG=1 /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FR /FD /c
+# SUBTRACT CPP /YX
 # ADD BASE RSC /l 0x409 /d "_DEBUG"
 # ADD RSC /l 0x409 /i "c:\include" /d "_DEBUG"
 BSC32=bscmake.exe
@@ -98,8 +97,8 @@ LINK32=link.exe
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MD /W3 /GX /O2 /I "." /I "regex" /I "..\bindlib_w32" /I "Zend" /I "tsrm" /D "NDEBUG" /D "MSVC5" /D "_CONSOLE" /D "ZTS" /D "WIN32" /D "_MBCS" /D ZEND_DEBUG=0 /Fr /FD /c
 # SUBTRACT BASE CPP /YX /Yc /Yu
-# ADD CPP /nologo /MD /W3 /GX /O2 /I "../../include" /I "..\..\win32build\include" /I ".." /I "..\main" /I "..\regex" /I "..\Zend" /I "..\TSRM" /I "..\sapi\cgi\libfcgi\include" /D FCGI_STATIC=1 /D PHP_FASTCGI=1 /D "NDEBUG" /D ZEND_DEBUG=0 /D "ZEND_WIN32_FORCE_INLINE" /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FD /c
-# SUBTRACT CPP /Fr /YX /Yc /Yu
+# ADD CPP /nologo /MD /W3 /GX /O2 /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /I "..\sapi\cgi\libfcgi\include" /D FCGI_STATIC=1 /D PHP_FASTCGI=1 /D "NDEBUG" /D ZEND_DEBUG=0 /D "ZEND_WIN32_FORCE_INLINE" /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /Fr /FD /c
+# SUBTRACT CPP /YX /Yc /Yu
 # ADD BASE RSC /l 0x409 /d "NDEBUG"
 # ADD RSC /l 0x409 /d "NDEBUG"
 BSC32=bscmake.exe
@@ -125,8 +124,8 @@ LINK32=link.exe
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MD /W3 /GX /O2 /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /D "NDEBUG" /D ZEND_DEBUG=0 /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /Fr /FD /c
 # SUBTRACT BASE CPP /YX /Yc /Yu
-# ADD CPP /nologo /MD /W3 /GX /Zi /Od /I "../../include" /I "..\..\win32build\include" /I ".." /I "..\main" /I "..\regex" /I "..\Zend" /I "..\TSRM" /I "..\sapi\cgi\libfcgi\include" /D FCGI_STATIC=1 /D PHP_FASTCGI=1 /D "NDEBUG" /D ZEND_DEBUG=0 /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FD /c
-# SUBTRACT CPP /Fr /YX /Yc /Yu
+# ADD CPP /nologo /MD /W3 /GX /Zi /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /I "..\sapi\cgi\libfcgi\include" /D FCGI_STATIC=1 /D PHP_FASTCGI=1 /D "NDEBUG" /D ZEND_DEBUG=0 /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /Fr /FD /c
+# SUBTRACT CPP /YX /Yc /Yu
 # ADD BASE RSC /l 0x409 /d "NDEBUG"
 # ADD RSC /l 0x409 /d "NDEBUG"
 BSC32=bscmake.exe
@@ -136,34 +135,7 @@ LINK32=link.exe
 # ADD BASE LINK32 php5ts.lib winmm.lib wsock32.lib netapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /version:4.0 /subsystem:console /machine:I386 /nodefaultlib:"libc.lib" /out:"..\Release_TS\php.exe" /libpath:"..\Release_TS"
 # ADD LINK32 php5ts.lib winmm.lib wsock32.lib netapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib /nologo /version:4.0 /subsystem:console /debug /machine:I386 /nodefaultlib:"libc.lib" /out:"..\Release_TSDbg\php.exe" /libpath:"..\Release_TSDbg"
 
-!ELSEIF  "$(CFG)" == "php5ts - Win32 Release_TS_Final"
-
-# PROP BASE Use_MFC 0
-# PROP BASE Use_Debug_Libraries 0
-# PROP BASE Output_Dir "php5ts___Win32_Release_TS_Final"
-# PROP BASE Intermediate_Dir "php5ts___Win32_Release_TS_Final"
-# PROP BASE Ignore_Export_Lib 0
-# PROP BASE Target_Dir ""
-# PROP Use_MFC 0
-# PROP Use_Debug_Libraries 0
-# PROP Output_Dir "php5ts___Win32_Release_TS_Final"
-# PROP Intermediate_Dir "php5ts___Win32_Release_TS_Final"
-# PROP Ignore_Export_Lib 0
-# PROP Target_Dir ""
-# ADD BASE CPP /nologo /MD /W3 /GX /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\Zend" /I "..\TSRM" /I "..\sapi\cgi\libfcgi\include" /D FCGI_STATIC=1 /D PHP_FASTCGI=1 /D "NDEBUG" /D ZEND_DEBUG=0 /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /Fr /FD /c
-# SUBTRACT BASE CPP /YX /Yc /Yu
-# ADD CPP /nologo /MD /W3 /GX /I "../../include" /I "..\..\win32build\include" /I ".." /I "..\main" /I "..\regex" /I "..\Zend" /I "..\TSRM" /I "..\sapi\cgi\libfcgi\include" /D FCGI_STATIC=1 /D PHP_FASTCGI=1 /D "NDEBUG" /D ZEND_DEBUG=0 /D "_CONSOLE" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FD /c
-# SUBTRACT CPP /Fr /YX /Yc /Yu
-# ADD BASE RSC /l 0x409 /d "NDEBUG"
-# ADD RSC /l 0x409 /d "NDEBUG"
-BSC32=bscmake.exe
-# ADD BASE BSC32 /nologo
-# ADD BSC32 /nologo
-LINK32=link.exe
-# ADD BASE LINK32 php5ts.lib winmm.lib ws2_32.lib netapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /version:4.0 /subsystem:console /machine:I386 /nodefaultlib:"libc.lib" /out:"..\Release_TS\php.exe" /libpath:"..\Release_TS"
-# ADD LINK32 php5ts.lib winmm.lib ws2_32.lib netapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /version:4.0 /subsystem:console /machine:I386 /nodefaultlib:"libc.lib" /out:"../../output/php.exe" /libpath:"..\Release_TS"
-
-!ENDIF
+!ENDIF 
 
 # Begin Target
 
@@ -171,7 +143,6 @@ LINK32=link.exe
 # Name "php5ts - Win32 Debug_TS"
 # Name "php5ts - Win32 Release_TS_inline"
 # Name "php5ts - Win32 Release_TSDbg"
-# Name "php5ts - Win32 Release_TS_Final"
 # Begin Group "Source Files"
 
 # PROP Default_Filter ".c"
@@ -195,14 +166,18 @@ SOURCE=..\sapi\cgi\getopt.c
 
 SOURCE=..\sapi\cgi\php_getopt.h
 # End Source File
-# Begin Source File
-
-SOURCE=..\main\php_network.h
-# End Source File
 # End Group
 # Begin Group "libfcgi"
 
 # PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=..\sapi\cgi\libfcgi\fcgiapp.c
+# End Source File
+# Begin Source File
+
+SOURCE=..\sapi\cgi\libfcgi\os_win32.c
+# End Source File
 # End Group
 # Begin Source File
 
